@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flavio Briatore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="fia-theme principal-details-page privacy-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+
+<nav aria-label="Main navigation">
+  <a href="../index.html">Home</a>
+  <a href="../teams.html">Teams</a>
+  <a href="../drivers.html">Drivers</a>
+  <a href="../principals.html" aria-current="page">Principals</a>
+  <a href="../circuits.html">Circuits</a>
+  <a href="../grid-summary.html">Season Grid</a>
+  <a href="../about.html">About</a>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../contacts.html">Contacts</a>
+</nav>
+
+<main aria-labelledby="page-title">
+    <section class="principal-card alpine-section">
+
+      <div class="principal-info">
+        <h1 id="page-title">
+          <img src="../images/logos/alpine-256.png" 
+                class="team-logo-small" 
+                alt="Alpine F1 Team logo">
+          Flavio Briatore
+        </h1>
+
+     
+        
+      <p><strong>Team:</strong> Alpine</p>
+      <p><strong>Nationality:</strong> Italy</p>
+      <p><strong>Born:</strong> 1950</p>
+      <p><strong>In charge since:</strong> 2024<strong/p>
+         <p><strong>History:</strong> Flavio Briatore is an Italian businessman and Formula 1 executive currently involved in the leadership of the Alpine F1 Team project. He is widely known for his charismatic personality, aggressive management style, and ability to build competitive teams in Formula 1.
+
+Briatore first became prominent in F1 during the 1990s as team principal of Benetton Formula. Under his leadership, Benetton won the Drivers’ Championships in 1994 and 1995, as well as the Constructors’ Championship in 1995.
+
+He later led the Renault F1 Team, achieving further success with Fernando Alonso, who won world titles in 2005 and 2006. Briatore became known for identifying young talent and creating highly competitive racing structures.
+
+He eventually returned to Formula 1 and rejoined Alpine to help restructure and strengthen the team’s long-term project. Today, he is considered one of the most influential and experienced figures in modern Formula 1 management.</p>
+    </div>
+
+      <img src="../images/principals/briatore.jpeg" 
+      class="principal-photo" 
+      alt="Flavio Briatore"
+      loading="lazy">
+
+    </section>  
+  </main>
+
+  <footer><p>© 2026 Elisa – F1 Fan Project</p></footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

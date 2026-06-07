@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Racing Bulls</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" 
+        rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="fia-theme privacy-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+
+<nav aria-label="Main navigation">
+  <a href="../index.html">Home</a>
+  <a href="../teams.html" aria-current="page">Teams</a>
+  <a href="../drivers.html">Drivers</a>
+  <a href="../principals.html">Principals</a>
+  <a href="../circuits.html">Circuits</a>
+  <a href="../grid-summary.html">Season Grid</a>
+  <a href="../about.html">About</a>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../contacts.html">Contacts</a>
+</nav>
+
+
+<main aria-labelledby="page-title">
+  <section class="team-card rb-section">
+
+    <h1 id="page-title">
+      <img src="../images/logos/rb-256.png" class="team-logo-small" alt="Racing Bulls logo">
+      Racing Bulls
+    </h1>
+
+    <p><strong>Drivers:</strong>
+      <a href="../drivers/lawson.html">Liam Lawson</a>,
+      <a href="../drivers/lindblad.html">Arvid Lindblad</a>
+    </p>
+
+    <p><strong>Team Principal:</strong>
+      <a href="../principals/permane.html">Alan Permane</a>
+    </p>
+
+    <p><strong>Base:</strong> Faenza, Italy</p>
+    <p><strong>Power Unit:</strong> Honda RBPT</p>
+    <p><strong>History:</strong> Racing Bulls serves as Red Bull’s sister team and driver development platform, continuing the legacy of the former Toro Rosso and AlphaTauri organizations. Originally founded as Minardi in 1985, the Faenza-based team became famous for nurturing young talent despite operating with limited resources. Red Bull acquired the team in 2006 and transformed it into Toro Rosso, primarily focused on developing future Red Bull Racing drivers.
+
+Over the years, the team played a crucial role in launching the Formula 1 careers of Sebastian Vettel, Daniel Ricciardo, Max Verstappen, Carlos Sainz Jr., and Pierre Gasly. Vettel’s victory at the 2008 Italian Grand Prix remains one of the greatest underdog achievements in modern Formula 1 history. Rebranded several times before becoming Racing Bulls, the team maintained its identity as a highly competitive midfield organization focused on youth development, technical flexibility, and aggressive racing culture.</p>
+
+  </section>
+</main>
+
+
+
+  <footer>
+    <p>© 2026 Elisa – F1 Fan Project</p>
+  </footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayao Komatsu</title>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="fia-theme principal-details-page privacy-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+
+<nav aria-label="Main navigation">
+  <a href="../index.html">Home</a>
+  <a href="../teams.html">Teams</a>
+  <a href="../drivers.html">Drivers</a>
+  <a href="../principals.html" aria-current="page">Principals</a>
+  <a href="../circuits.html">Circuits</a>
+  <a href="../grid-summary.html">Season Grid</a>
+  <a href="../about.html">About</a>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../contacts.html">Contacts</a>
+</nav>
+
+<main aria-labelledby="page-title">
+  <section class="principal-card haas-section">
+    
+    <div class="principal-info">
+      <h1 id="page-title">
+        <img src="../images/logos/haas-256.png" 
+        class="team-logo-small" 
+        alt="Haas F1 Team logo">
+         Ayao Komatsu
+      </h1>
+
+      <p><strong>Team:</strong> Haas</p>
+      <p><strong>Nationality:</strong> Japan</p>
+      <p><strong>Born:</strong> 1976</p>
+      <p><strong>In charge since:</strong> 2024</p>
+      <p><strong>History: </strong> engineer Ayao Komatsu became Team Principal of Haas in early 2024 following Guenther Steiner’s departure. He began his Formula 1 career with BAR in 2003 and later worked for Renault as a performance and race engineer.
+
+Komatsu joined Haas at their 2016 debut and eventually served as Trackside Engineering Director. His focus on efficiency and discipline has revived the team, helping Haas finish 7th in the 2024 Constructors’ standings and maintain stability entering 2026.</p>
+    
+</div>
+
+    <img src="../images/principals/komatsu.jpeg" 
+    class="principal-photo" 
+    alt="Ayao Komatsu"
+    loading="lazy">
+
+</section>
+  </main>
+
+  <footer><p>© 2026 Elisa – F1 Fan Project</p></footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

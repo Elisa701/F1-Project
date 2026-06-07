@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haas F1 Team</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" 
+  rel="stylesheet">
+  <link rel="stylesheet" href="../style.css"> 
+</head>
+
+<body class="fia-theme privacy-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+<nav aria-label="Main navigation">
+  <a href="../index.html">Home</a>
+  <a href="../teams.html" aria-current="page">Teams</a>
+  <a href="../drivers.html">Drivers</a>
+  <a href="../principals.html">Principals</a>
+  <a href="../circuits.html">Circuits</a>
+  <a href="../grid-summary.html">Season Grid</a>
+  <a href="../about.html">About</a>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../contacts.html">Contacts</a>
+</nav>
+
+
+<main aria-labelledby="page-title">
+  <section class="team-card haas-section">
+
+    <h1 id="page-title">
+      <img src="../images/logos/haas-256.png" class="team-logo-small" alt="Haas F1 Team logo">
+      Haas
+    </h1>
+
+    <p><strong>Drivers:</strong>
+      <a href="../drivers/ocon.html">Esteban Ocon</a>,
+      <a href="../drivers/bearman.html">Oliver Bearman</a>
+    </p>
+
+    <p><strong>Team Principal:</strong>
+      <a href="../principals/komatsu.html">Ayao Komatsu</a>
+    </p>
+
+    <p><strong>Base:</strong> Kannapolis, USA</p>
+    <p><strong>Power Unit:</strong> Ferrari</p>
+    <p><strong>History:</strong> Haas F1 Team became Formula 1’s first American-led constructor in decades when it entered the championship in 2016 under businessman Gene Haas. Unlike traditional teams, Haas adopted a unique partnership-heavy model involving close technical cooperation with Ferrari, allowing the organization to compete efficiently despite relatively limited resources. The team achieved surprisingly competitive results during its early seasons and quickly established itself as a serious midfield competitor.
+
+Throughout its Formula 1 journey, Haas experienced periods of instability, leadership changes, and financial challenges, yet consistently remained one of the sport’s most resilient independent operations. Known for its straightforward and pragmatic approach, the team focused heavily on maximizing efficiency and driver development opportunities. By 2026, Haas continued building toward greater long-term competitiveness with a younger driver lineup and increasingly stable technical foundations.</p>
+
+  </section>
+</main>
+
+
+
+  <footer>
+    <p>© 2026 Elisa – F1 Fan Project</p>
+  </footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

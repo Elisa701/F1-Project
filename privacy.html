@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fia-theme ferrari-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="drivers.html">Drivers</a>
+    <a href="principals.html">Principals</a>
+    <a href="circuits.html">Circuits</a>
+    <a href="grid-summary.html">Season Grid</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html" aria-current="page">Privacy</a>
+    <a href="contacts.html">Contacts</a>
+  </nav>
+
+  <main aria-labelledby="page-title">
+
+    <section class="hero-bg">
+      <h1 id="page-title">Privacy Policy</h1>
+      <p>This page explains how user data is handled within the “F1 Fan Project” website.</p>
+    </section>
+
+    <section class="privacy-section">
+      <h2>1. Purpose of the Website</h2>
+      <p>This website is a university project dedicated to the 2026 Formula 1 World Championship. It does not collect personal data for commercial purposes and does not use advanced tracking systems.</p>
+    </section>
+
+    <section class="privacy-section">
+      <h2>2. Data Collected</h2>
+      <p>The website does not require registration and does not collect personally identifiable information. However, anonymous technical data may be collected automatically by the browser, such as:</p>
+      <ul>
+        <li>masked IP address</li>
+        <li>device and browser type</li>
+        <li>visited pages</li>
+        <li>time spent on the website</li>
+      </ul>
+      <p>This information is not used for profiling.</p>
+    </section>
+
+    <section class="privacy-section">
+      <h2>3. Cookies</h2>
+      <p>The website uses only technical cookies necessary for proper functionality. No profiling cookies or third‑party cookies are used.</p>
+    </section>
+
+    <section class="privacy-section">
+      <h2>4. Contact Form</h2>
+      <p>If the user submits a message through a contact form, the provided data (name, email, message) is used solely to respond to the request. No data is stored or shared.</p>
+    </section>
+
+    <section class="privacy-section">
+      <h2>5. External Links</h2>
+      <p>The website may contain links to external resources (e.g., Wikipedia, official F1 websites). We are not responsible for their privacy policies.</p>
+    </section>
+
+    <section class="privacy-section">
+      <h2>6. User Rights</h2>
+      <p>Users may request information or deletion of any data submitted through the contact form by writing to:</p>
+      <p><strong>your-email@example.com</strong></p>
+    </section>
+
+    <section class="privacy-section">
+      <h2>7. Updates</h2>
+      <p>This Privacy Policy may be updated at any time to improve transparency or comply with new regulations.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Elisa – F1 Fan Project</p>
+  </footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

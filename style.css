@@ -1,0 +1,1673 @@
+/* ============================
+   SEZIONE A — GLOBAL THEME + TYPOGRAPHY
+============================ */
+
+.fia-theme {
+  background: radial-gradient(circle at top, #1A1F2E 0%, #0A0F1F 60%, #05070D 100%);
+  background-attachment: fixed;
+  color: #FFFFFF;
+  animation: bgMove 20s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+li, a {
+  font-weight: 500;
+}
+
+
+/* ============================
+   SEZIONE B — NAVBAR 
+============================ */
+nav {
+  background-color: rgba(10, 15, 31, 0.9);
+  padding: 15px 25px;
+  border-bottom: 3px solid #E10600;
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: #E10600;
+  text-shadow: 0 0 10px #E10600;
+}
+
+
+
+
+/* ============================
+   SEZIONE C — HERO 
+============================ */
+
+.hero-home {
+  position: relative;
+  width: 100%;
+  padding: 60px 20px 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/hero/hero.png");
+  background-size: cover;
+  background-position: center top;
+
+  overflow: hidden;  
+  z-index: 1;           
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; 
+  max-width: 900px;
+}
+
+.hero-home h1 {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  word-break: break-word;
+}
+
+.hero-home h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+  word-break: break-word;
+  margin-bottom: 18px;
+}
+
+.hero-home::before,
+.hero-home::after,
+.hero-overlay {
+  pointer-events: none !important;
+}
+
+.hero-bg {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/hero/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/* ============================
+   SEZIONE D — BASE SECTIONS
+============================ */
+
+.fia-theme section {
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 12px;
+  max-width: 900px;
+  background-color: #1A1F2E;
+}
+
+.fia-theme section[class$="-section"] {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* ============================
+   GRID — SEASON OVERVIEW
+============================ */
+
+.grid-page .season-grid {
+  max-width: 1100px;
+  margin: 30px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.grid-card {
+  background-color: #1A1F2E;
+  padding: 20px 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+  transition: 0.25s ease;
+}
+
+
+/* ============================
+COLORI PERSONALIZZATI GRID-CARD
+============================ */
+
+.grid-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-card-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    filter: brightness(0.75);
+}
+
+.grid-card-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,0.10),
+        rgba(0,0,0,0.45)
+    );
+    z-index: 2;
+}
+
+.grid-card-content {
+    position: relative;
+    z-index: 3;
+}
+
+.grid-card-content h2,
+.grid-card-content p {
+    color: #ffffff;
+}
+
+
+/* ============================
+   GRID CARD — IMMAGINI AUTOMATICHE
+============================ */
+
+/* Piloti */
+.star-driver .grid-card-bg {
+    background-image: url('images/drivers/verstappen.png');
+}
+
+.champion-2025 .grid-card-bg {
+    background-image: url('images/drivers/norris.png');
+}
+
+.rising-talent .grid-card-bg {
+    background-image: url('images/drivers/antonelli.png');
+}
+
+/* Circuiti */
+.iconic-circuit .grid-card-bg {
+    background-image: url('images/circuits/monza.jpeg');
+}
+
+.night-race .grid-card-bg {
+    background-image: url('images/circuits/marinabay.jpeg');
+}
+
+
+
+
+.grid-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+}
+
+.grid-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.grid-card p {
+  margin: 4px 0;
+  font-size: 0.98rem;
+}
+
+/* Responsive grid */
+@media (max-width: 992px) {
+  .grid-page .season-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-page .season-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ============================
+  ABOUT PAGE
+============================ */
+
+.about-section {
+  background-image:
+    linear-gradient(rgba(0,0,0, 0.45), rgba(0,0,0,0.45)),
+    url("images/flags/checkered.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff !important;
+}
+
+.about-section {
+    padding: 40px 30px !important;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-section p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.about-section h2 {
+    margin-top: 30px;
+}
+
+
+
+
+
+/* ============================
+   PRIVACY PAGE
+============================ */
+
+.fia-theme section h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.fia-theme section ul {
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+.privacy-section {
+  background-image:
+    linear-gradient(rgba(0,0,0, 0.45), rgba(0,0,0,0.45)),
+    url("images/flags/checkered.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff !important;
+}
+
+
+
+/* ============================
+SEZIONE E — COLORI SCUDERIE
+============================ */
+
+
+.fia-theme section[class$="-section"] {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+}
+
+/* FERRARI */
+.ferrari-section {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.45)),
+    url("images/details/ferrari.jpeg");
+}
+
+/* MERCEDES */
+.mercedes-section {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.45)),
+    url("images/details/mercedes.jpeg");
+}
+
+/* MCLAREN */
+.mclaren-section {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.45)),
+    url("images/details/mclaren.jpeg");
+}
+
+/* ASTON MARTIN */
+.aston-section {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.45)),
+    url("images/details/aston.jpeg");
+}
+
+/* RED BULL */
+.redbull-section {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.45)),
+    url("images/details/redbull.jpeg");
+}
+
+/* RACING BULLS */
+.rb-section {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.45)),
+    url("images/details/rb.jpeg");
+}
+
+/* AUDI */
+.audi-section {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.45)),
+    url("images/details/audi.jpeg");
+}
+
+/* WILLIAMS */
+.williams-section {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.45)),
+    url("images/details/williams.jpeg");
+}
+
+/* HAAS */
+.haas-section {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.45)),
+    url("images/details/haas.jpeg");
+}
+
+/* ALPINE */
+.alpine-section {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.45)),
+    url("images/details/alpine.jpeg");
+}
+
+/* CADILLAC */
+.cadillac-section {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.45)),
+    url("images/details/cadillac.jpeg");
+}
+
+
+/* ============================
+   COLORI LINK PER SCUDERIA 
+============================ */
+
+.ferrari-section a { color: #FFFFFF !important; }
+.mercedes-section a { color: #ffffff !important; }
+.mclaren-section a { color: #ffffff !important; }
+.aston-section a { color: #FFFFFF !important; }
+.redbull-section a { color: #ffffff !important; }
+.rb-section a { color: #ffffff !important; }
+.audi-section a { color: #FFFFFF !important; }
+.williams-section a { color: #ffffff !important; }
+.haas-section a { color: #ffffff !important; }
+.alpine-section a { color: #ffffff !important; }
+.cadillac-section a { color: #ffffff !important; }
+
+
+/* ============================
+LINK NELLE SEZIONI TEAM — STILE CARD
+============================ */
+
+.fia-theme section[class$="-section"] a {
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.fia-theme section[class$="-section"] a:hover {
+  transform: translateX(4px);
+  filter: brightness(1.25);
+}
+
+
+
+
+
+/* ============================
+SEZIONE F — BACKGROUND MONOPOSTO
+============================ */
+
+.teams-page section[class$="-section"] {
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.90), rgba(0,0,0,0.10)),
+    var(--team-car);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #FFFFFF;
+}
+
+
+.teams-page .ferrari-section {
+  --team-car: url("images/cars/ferrari.jpeg");
+}
+
+.teams-page .mercedes-section {
+  --team-car: url("images/cars/mercedes.jpeg");
+}
+
+.teams-page .mclaren-section {
+  --team-car: url("images/cars/mclaren.jpeg");
+}
+
+.teams-page .redbull-section {
+  --team-car: url("images/cars/redbull.jpeg");
+}
+
+.teams-page .aston-section {
+  --team-car: url("images/cars/aston.jpeg");
+}
+.teams-page .rb-section {
+  --team-car: url("images/cars/rb.jpeg");
+}
+
+.teams-page .williams-section {
+  --team-car: url("images/cars/williams.jpeg");
+}
+
+.teams-page .haas-section {
+  --team-car: url("images/cars/haas.jpeg");
+}
+
+.teams-page .alpine-section {
+  --team-car: url("images/cars/alpine.jpeg");
+}
+
+.teams-page .audi-section {
+  --team-car: url("images/cars/audi.jpeg");
+}
+
+.teams-page .cadillac-section {
+  --team-car: url("images/cars/cadillac.jpeg");
+}
+
+
+
+
+
+/* ============================
+   SEZIONE G — CARD TEAM, PILOTI, PRINCIPALS (OTTIMIZZATA)
+============================ */
+
+/* --- STRUTTURA BASE CARD --- */
+.team-card,
+.driver-card,
+.principal-card {
+    background-color: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 35px auto;
+    max-width: 900px;
+    transition: 0.25s ease;
+}
+
+.team-card:hover,
+.driver-card:hover,
+.principal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.30);
+}
+
+/* --- TITOLI CARD --- */
+.team-card h2,
+.driver-card h2,
+.principal-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+/* --- TESTO CARD --- */
+.team-card p,
+.driver-card p,
+.principal-card p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    font-weight: 400;
+}
+
+.team-card p,
+.driver-card p,
+.principal-card p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.team-card,
+.driver-card,
+.principal-card {
+  box-sizing: border-box;
+}
+
+
+/* --- FOTO COMUNI --- */
+.driver-photo,
+.principal-photo {
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+    object-fit: cover;
+}
+
+/* --- CARD PILOTI --- */
+.driver-card {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 30px !important;
+    text-align: left !important;
+}
+
+
+.driver-photo {
+    width: 250px !important;
+    margin-right: 10px !important;
+    position: relative !important;
+    top: 0 !important;
+    right: 0 !important;
+    align-self: flex-start !important;
+    z-index: 10 !important;
+}
+
+.driver-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.driver-card p {
+    margin: 2px 0 !important;
+    line-height: 1.2 !important;
+}
+
+/* --- CARD PRINCIPALS (DETTAGLIO) --- */
+.principal-details-page .principal-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+
+.principal-card p {
+    margin: 2px 0 !important;
+    line-height: 1.2 !important;
+}
+
+
+.principal-photo {
+    width: 260px;
+}
+
+.principal-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* --- CARD PRINCIPALS (LISTA) --- */
+.principals-page .principal-card {
+    display: block;
+    text-align: left;
+}
+
+.principals-page .principal-card p {
+    margin-top: 6px;
+}
+
+/* --- LISTE DRIVER/PRINCIPALS --- */
+.driver-list,
+.principal-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.driver-list a,
+.principal-list a {
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.driver-list a:hover,
+.principal-list a:hover {
+    filter: brightness(1.25);
+    transform: translateX(4px);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .team-card {
+        margin: 20px auto;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-card {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .principal-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+
+    .driver-info,
+    .principal-info {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .driver-list li,
+    .principal-list li {
+        font-size: 1rem;
+        padding: 6px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-card { padding: 15px; }
+
+    .driver-info,
+    .principal-info {
+        font-size: 0.95rem;
+    }
+
+    .driver-list li,
+    .principal-list li {
+        font-size: 0.95rem;
+    }
+}
+
+/* --- LOGHI TEAM PICCOLI --- */
+.team-logo-small {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+
+
+
+/* ============================
+   SEZIONE G2 — SFONDI CARD PILOTI
+============================ */
+
+.driver-card[class*="-"] {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FFFFFF !important;
+}
+
+.driver-card[class*="-"] * {
+  color: #FFFFFF !important;
+}
+
+.driver-card.albon-23 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/23.jpeg"); }
+.driver-card.verstappen-3 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/3.jpeg"); }
+.driver-card.leclerc-16 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/16.jpeg"); }
+.driver-card.hamilton-44 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/44.jpeg"); }
+.driver-card.russell-63 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/63.jpeg"); }
+.driver-card.antonelli-12 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/12.jpeg"); }
+.driver-card.piastri-81 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/81.jpeg"); }
+.driver-card.norris-1 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/1.jpeg"); }
+.driver-card.hadjar-6  { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/6.jpeg"); }
+.driver-card.sainz-55  { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/55.jpeg"); }
+.driver-card.lindblad-41 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/41.jpeg"); }
+.driver-card.lawson-30 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/30.jpeg"); }
+.driver-card.alonso-14 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/14.jpeg"); }
+.driver-card.stroll-18 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/18.jpeg"); }
+.driver-card.bearman-87 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/87.jpeg"); }
+.driver-card.ocon-31 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/31.jpeg"); }
+.driver-card.hulkenberg-27 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/27.jpeg"); }
+.driver-card.bortoleto-5 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/5.jpeg"); }
+.driver-card.gasly-10 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/10.jpeg"); }
+.driver-card.colapinto-43 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/43.jpeg"); }
+.driver-card.perez-11 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/11.jpeg"); }
+.driver-card.bottas-77 { background-image: linear-gradient(rgba(10,15,31,0.60), rgba(10,15,31,0.60)), url("images/numbers/77.jpeg"); }
+
+
+
+
+
+
+/* ============================
+SEZIONE G3 — CARD CIRCUITI (FORZATA)
+============================ */
+
+.circuit-card {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 40px !important;
+    text-align: left !important;
+}
+
+/* SEZIONE G3 — CARD CIRCUITI — BANDIERE */
+.circuit-card.flag-australia {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/australia.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-china {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/china.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-japan {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/japan.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-bahrain {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/bahrain.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-saudi {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/saudi.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-usa {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/USA.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-canada {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/canada.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-mexico {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/mexico-flag.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-brazil {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/brazil.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-monaco {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/monaco.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-spain {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/spain.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-austria {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/austria.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.circuit-card.flag-uk {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/UK.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-belgium {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/belgium.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-hungary {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/hungary.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-netherlands {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/netherlands.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-italy {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/italy.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.circuit-card.flag-azerbaijan {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/azerbaijan.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circuit-card.flag-singapore {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/singapore.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.circuit-card.flag-qatar {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/qatar.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.circuit-card.test-abudhabi {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
+    url("images/flags/UAE.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-image.circuit-small {
+    max-width: 420px;
+    height: auto;
+}
+
+.circuit-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.circuit-info {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
+
+.circuit-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.45) !important;
+}
+
+/* ============================
+CIRCUIT CARDS — Responsive
+============================ */
+
+@media (max-width: 1024px) {
+    .circuit-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .circuit-image {
+        width: 80%;
+        margin: 10px auto 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .circuit-card {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    .circuit-text h2 { font-size: 1.3rem; }
+    .circuit-text p  { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .circuit-image { width: 100%; }
+    .circuit-text h2 { font-size: 1.1rem; }
+}
+
+/* ============================
+CIRCUIT WITH IMAGE
+============================ */
+
+.circuit-with-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.circuit-with-image h2,
+.circuit-with-image p {
+    margin: 0;
+    text-align: left;
+}
+
+.circuit-with-image .circuit-image {
+    width: 240px;
+    height: auto;
+    object-fit: contain;
+    margin-left: auto;
+    display: block;
+}
+
+
+/* ============================
+SEZIONE H — PAGINA CIRCUITI
+============================ */
+
+.circuit-page.UAE-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/UAE.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.australia-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/australia.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.USA-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/USA.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.bahrain-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/bahrain.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.azerbaijan-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/azerbaijan.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.circuit-page.spain-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/spain.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.circuit-page.hungary-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/hungary.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.circuit-page.brazil-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/brazil.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.saudi-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/saudi.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.qatar-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/qatar.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.singapore-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/singapore.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.circuit-page.mexico-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/mexico-flag.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.monaco-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/monaco.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.canada-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/canada.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.ferrari-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/ferrari-flag.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.redbull-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/redbull-flag.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.circuit-page.china-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/china.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.UK-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/UK.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.circuit-page.belgium-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/belgium.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.japan-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/japan.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circuit-page.netherlands-flag {
+  background-image:
+    linear-gradient(rgba(10, 15, 31, 0.35), 
+    rgba(10, 15, 31, 0.75)),
+    url("images/flags/netherlands.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+.fia-theme .circuit-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.fia-theme .circuit-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.fia-theme .circuit-header h1::after {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 3px;
+    background: #E10600;
+    margin: 14px auto 0;
+    border-radius: 2px;
+}
+
+.fia-theme .circuit-layout {
+  background-color: transparent;
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+.fia-theme .circuit-info,
+.fia-theme .circuit-description {
+    background-color: rgba(15, 20, 36, 0.75);
+    padding: 25px 30px;
+    border-radius: 14px;
+    border-left: 4px solid #E10600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.fia-theme .circuit-info {
+    max-width: 350px;
+}
+
+.fia-theme .circuit-info h2,
+.fia-theme .circuit-description h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.fia-theme .circuit-info p,
+.fia-theme .circuit-description p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #DDDDDD;
+}
+
+
+
+
+/* ============================
+SEZIONE I — ABOUT
+============================ */
+
+.about-section {
+    background-color: #C30000;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* ============================
+SEZIONE J — PRIVACY
+============================ */
+
+.privacy-section {
+    background-color: #C30000;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* ============================
+SEZIONE K — FOOTER
+============================ */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #ffffff;
+}
+
+/* ============================
+SEZIONE L - CONTACT PAGE
+============================ */
+
+.contact-hero {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.contact-card {
+  background-color: rgba(255,255,255,0.05);
+  padding: 35px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+}
+
+.contact-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin: 6px 0;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: #E10600;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  background-color: #E10600;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ff1a1a;
+  transform: translateY(-3px);
+}
+
+/* ============================
+   COOKIE BANNER
+============================ */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 15, 31, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 18px 25px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  color: #fff;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.cookie-banner button {
+  background-color: #E10600;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cookie-banner button:hover {
+  background-color: #ff1a1a;
+  transform: translateY(-2px);
+}
+
+
+/* ============================
+   RESPONSIVE FIX — MOBILE SAFE
+============================ */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .fia-theme section {
+    padding: 18px;
+    margin: 18px auto;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+  }
+
+  nav a {
+    margin: 4px 0;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-home {
+    height: 48vh;
+    padding-top: 40px;
+    background-position: center;
+  }
+
+  .hero-home h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-home .hero-text {
+    font-size: 0.95rem;
+    text-align: left;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .driver-card,
+  .principal-card {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+  }
+
+  .driver-photo,
+  .principal-photo {
+    width: 80%;
+    max-width: 260px;
+  }
+
+  .driver-info,
+  .principal-info {
+    padding: 0 !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-page .season-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+}
+
+
+.hero-home {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.team-card,
+.grid-card,
+.driver-card,
+.principal-card,
+section {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* ============================
+   PATCH UNIVERSALE — LAYOUT TIPO "ABOUT"
+============================ */
+
+/* Contenitore uniforme per tutte le sezioni */
+.team-card,
+.driver-card,
+.principal-card,
+.circuit-card,
+.grid-card,
+.fia-theme section {
+    max-width: 900px !important;
+    margin: 30px auto !important;
+    padding: 30px !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+}
+
+/* Layout a colonna come la About */
+.team-card,
+.driver-card,
+.principal-card,
+.circuit-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+}
+
+.team-card p,
+.driver-card p,
+.principal-card p,
+.circuit-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+.team-logo-small,
+.driver-photo,
+.principal-photo,
+.circuit-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.team-card::before,
+.team-card::after,
+.driver-card::before,
+.driver-card::after,
+.principal-card::before,
+.principal-card::after {
+    pointer-events: none !important;
+}
+
+

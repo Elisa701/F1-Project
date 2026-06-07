@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mattia Binotto</title>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" 
+          rel="stylesheet">
+  <link rel="stylesheet" href="../style.css"> 
+</head>
+ 
+<body class="fia-theme principal-details-page privacy-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+
+<nav aria-label="Main navigation">
+  <a href="../index.html">Home</a>
+  <a href="../teams.html">Teams</a>
+  <a href="../drivers.html">Drivers</a>
+  <a href="../principals.html" aria-current="page">Principals</a>
+  <a href="../circuits.html">Circuits</a>
+  <a href="../grid-summary.html">Season Grid</a>
+  <a href="../about.html">About</a>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../contacts.html">Contacts</a>
+</nav>
+
+<main aria-labelledby="page-title">
+  <section class="principal-card audi-section">
+
+    <div class="principal-info">
+      <h1 id="page-title">
+        <img src="../images/logos/audi-256.png"
+             class="team-logo-small"
+             alt="Audi F1 Team logo">
+        Mattia Binotto
+      </h1>
+
+
+      <p><strong>Team:</strong> Audi</p>
+      <p><strong>Nationality:</strong> Swiss</p>
+      <p><strong>Born:</strong> 1969</p>
+      <p><strong>In charge since:</strong> 2026</p>
+
+      <p><strong>History:</strong> Binotto, born in Lausanne, Switzerland, is Team Principal of the Audi Formula 1 Project as of March 2026. He spent nearly three decades at Scuderia Ferrari, where he rose from engine department engineer to Technical Director and later Team Principal (2019–2022).<br><br>
+
+      Binotto joined Sauber in 2024 to oversee Audi’s Formula 1 project and became Head of the Audi F1 Program, ensuring close cooperation between Neuburg’s power unit division and Hinwil’s chassis base. He took over the Team Principal role directly in 2026, guiding Audi through its first full factory season.<br><br>
+
+      Widely regarded as one of Formula 1’s leading technical minds, Binotto played a key role in the development of Ferrari’s championship-winning power units and helped modernize the team’s engineering structure. His combination of deep technical expertise, long-term strategic planning, and experience managing large-scale Formula 1 operations has made him a central figure in Audi’s ambition to establish itself as a front-running manufacturer in the sport.</p>
+    </div>
+
+    <img src="../images/principals/binotto.jpeg" 
+          class="principal-photo" 
+          alt="Mattia Binotto"
+          loading="lazy">
+
+  </section>
+
+</main>
+
+  <footer>
+    <p>© 2026 Elisa – F1 Fan Project</p>
+  </footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

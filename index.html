@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formula 1 Hub</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" 
+        rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fia-theme">
+
+  <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+
+
+  <nav aria-label="Main navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="drivers.html">Drivers</a>
+    <a href="principals.html">Principals</a>
+    <a href="circuits.html">Circuits</a>
+    <a href="grid-summary.html">Season Grid</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="contacts.html">Contacts</a>
+  </nav>
+
+  <!-- HERO -->
+  <main class="hero-home" aria-labelledby="page-title">
+
+    <div class="hero-content">
+
+      <section class="hero-background ferrari-section">
+      <h1 id="page-title">WELCOME TO THE FORMULA 1 HUB</h1>
+      <p>Your complete guide to the 2026 Formula 1 season.</p>
+    </section>
+
+      <p class="hero-text">
+        Since its creation, Formula 1 has stood at the crossroads of science and spectacle — a world where aerodynamic genius meets split‑second instinct, and where the smallest detail can change the outcome of a race, a season, or a legacy. The 2026 championship marks a turning point: new regulations, new rivalries, and a generation of drivers and engineers determined to push the sport into the future.
+        Every Grand Prix is a theatre of precision and chaos, where strategy, weather, technology, and human resilience collide.
+      </p>
+
+      <p class="hero-text">
+        Teams bring machines crafted with thousands of hours of research; drivers bring talent sharpened by years of discipline and risk. Together, they create moments that define eras — from breathtaking overtakes to heartbreaking failures, from unexpected victories to legendary comebacks.
+        Here, you can explore the full landscape of the season: the iconic teams fighting for supremacy, the drivers whose stories inspire millions, the principals orchestrating every move behind the scenes, and the circuits that have become symbols of speed and passion.
+        Welcome to the 2026 Formula 1 Hub — your gateway to the fastest, most demanding, and most captivating sport in the world.
+      </p>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Elisa – F1 Fan Project</p>
+  </footer>
+
+  <!-- COOKIE SCRIPT -->
+  <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

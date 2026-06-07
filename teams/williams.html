@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Williams Racing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" 
+  rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="fia-theme privacy-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+  
+<nav aria-label="Main navigation">
+  <a href="../index.html">Home</a>
+  <a href="../teams.html" aria-current="page">Teams</a>
+  <a href="../drivers.html">Drivers</a>
+  <a href="../principals.html">Principals</a>
+  <a href="../circuits.html">Circuits</a>
+  <a href="../grid-summary.html">Season Grid</a>
+  <a href="../about.html">About</a>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../contacts.html">Contacts</a>
+</nav>
+
+
+<main aria-labelledby="page-title">
+  <section class="team-card williams-section">
+
+    <h1 id="page-title">
+      <img src="../images/logos/williams-256.png" class="team-logo-small" alt="Williams logo">
+      Williams
+    </h1>
+
+    <p><strong>Drivers:</strong>
+      <a href="../drivers/sainz.html">Carlos Sainz</a>,
+      <a href="../drivers/albon.html">Alexander Albon</a>
+    </p>
+
+    <p><strong>Team Principal:</strong>
+      <a href="../principals/vowles.html">James Vowles</a>
+    </p>
+
+    <p><strong>Base:</strong> Grove, United Kingdom</p>
+    <p><strong>Power Unit:</strong> Mercedes</p>
+    <p><strong>History:</strong> Williams Racing is one of the most legendary independent teams in Formula 1 history. Founded by Sir Frank Williams and Patrick Head in 1977, the British team rose to prominence during the 1980s and 1990s, becoming one of the sport’s greatest engineering powerhouses. Williams secured multiple Constructors’ and Drivers’ Championships with iconic drivers including Nigel Mansell, Alain Prost, Nelson Piquet, Damon Hill, Jacques Villeneuve, and Keke Rosberg. During its peak years, the team became famous for technical innovation, professionalism, and a relentless competitive culture.
+
+After the departure of major manufacturers and changing financial realities in Formula 1, Williams experienced a prolonged decline throughout the 2010s. However, under new ownership by Dorilton Capital, the team entered a rebuilding phase centered on modernization, long-term investment, and renewed competitiveness. The arrival of experienced drivers such as Carlos Sainz Jr. alongside Alexander Albon signaled Williams’ ambition to return to the front of the grid. By 2026, the team was increasingly viewed as a resurgent force aiming to restore the prestige associated with one of Formula 1’s most historic names.</p>
+
+  </section>
+</main>
+
+
+  <footer>
+    <p>© 2026 Elisa – F1 Fan Project</p>
+  </footer>
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+
+</body>
+</html>

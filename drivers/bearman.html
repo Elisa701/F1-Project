@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oliver Bearman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="fia-theme privacy-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+
+<nav aria-label="Main navigation">
+  <a href="../index.html">Home</a>
+  <a href="../teams.html">Teams</a>
+  <a href="../drivers.html" aria-current="page">Drivers</a>
+  <a href="../principals.html">Principals</a>
+  <a href="../circuits.html">Circuits</a>
+  <a href="../grid-summary.html">Season Grid</a>
+  <a href="../about.html">About</a>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../contacts.html">Contacts</a>
+</nav>
+
+
+<main aria-labelledby="page-title">
+
+<section class="driver-card bearman-87 haas-section">
+
+  <div class="driver-info">
+   <h1 id="page-title">
+  <img src="../images/logos/haas-256.png" 
+  class="team-logo-small" 
+  alt="Haas F1 Team logo">
+  Oliver Bearman
+</h1>
+
+    <p><strong>Team:</strong> Haas F1 Team</p>
+    <p><strong>Team Principal:</strong> Ayao Komatsu</p>
+    <p><strong>Number:</strong> 87</p>
+    <p><strong>Nationality:</strong> United Kingdom</p>
+    <p><strong>Debut:</strong> 2026</p>
+    <p><strong>Born:</strong> 8 May 2005</p>
+      <p><strong>History:</strong> British driver Oliver Bearman rapidly established himself as one of Formula 1’s brightest young prospects after rising through the Ferrari Driver Academy. Following standout substitute appearances that immediately impressed teams and fans alike, Bearman secured a full-time seat thanks to his maturity, adaptability, and natural speed. Known for his confidence under pressure and smooth driving style, he entered 2026 as a central part of Haas’ future ambitions and one of the most closely watched young drivers in the sport.</p>
+
+    </div>
+
+  <img src="../images/drivers/bearman.png"
+     class="driver-photo"
+     alt="Portrait of Formula 1 driver Oliver Bearman"
+     loading="lazy">
+
+
+</section>
+  </main>
+
+  <footer>
+    <p>© 2026 Elisa – F1 Fan Project</p>
+  </footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valtteri Bottas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="fia-theme privacy-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+
+<nav aria-label="Main navigation">
+  <a href="../index.html">Home</a>
+  <a href="../teams.html">Teams</a>
+  <a href="../drivers.html" aria-current="page">Drivers</a>
+  <a href="../principals.html">Principals</a>
+  <a href="../circuits.html">Circuits</a>
+  <a href="../grid-summary.html">Season Grid</a>
+  <a href="../about.html">About</a>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../contacts.html">Contacts</a>
+</nav>
+
+
+<main aria-labelledby="page-title">
+
+    <section class="driver-card bottas-77 cadillac-section">
+      <div class="driver-info">
+   <h1 id="page-title">
+  <img src="../images/logos/cadillac-256.png"
+        class="team-logo-small" 
+        alt="Cadillac F1 Team logo">
+  Valtteri Bottas
+</h1>
+
+
+    <p><strong>Team:</strong> Cadillac F1 Team</p>
+    <p><strong>Team Principal:</strong> Gremae Lowdon</p>
+    <p><strong>Number:</strong> 77</p>
+    <p><strong>Nationality:</strong> Finland</p>
+    <p><strong>Debut:</strong> 2013</p>
+    <p><strong>Born:</strong> 28 August 1989</p>
+      <p><strong>History:</strong> Finnish driver Valtteri Bottas enjoyed one of the most successful careers of the hybrid era, winning multiple Grands Prix during his time with Mercedes alongside Lewis Hamilton. Recognized for his qualifying pace, professionalism, and technical contribution, Bottas became one of Formula 1’s most respected team players. Joining Cadillac for its entry into Formula 1, he brought valuable leadership and experience to the ambitious American project as the team sought to establish itself competitively in 2026.</p>
+
+    </div>
+
+  <img src="../images/drivers/bottas.png"
+     class="driver-photo"
+     alt="Portrait of Formula 1 driver Valtteri Bottas"
+     loading="lazy">
+
+
+</section>
+  </main>
+
+  <footer>
+    <p>© 2026 Elisa – F1 Fan Project</p>
+  </footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
+

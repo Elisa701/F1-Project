@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toto Wolff</title>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="fia-theme principal-details-page privacy-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+<nav aria-label="Main navigation">
+  <a href="../index.html">Home</a>
+  <a href="../teams.html">Teams</a>
+  <a href="../drivers.html">Drivers</a>
+  <a href="../principals.html" aria-current="page">Principals</a>
+  <a href="../circuits.html">Circuits</a>
+  <a href="../grid-summary.html">Season Grid</a>
+  <a href="../about.html">About</a>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../contacts.html">Contacts</a>
+</nav>
+
+<main aria-labelledby="page-title">
+  <section class="principal-card mercedes-section">
+
+    <div class="principal-info">
+      <h1 id="page-title">
+        <img src="../images/logos/mercedes-256.png" 
+        class="team-logo-small" 
+        alt="Mercedes logo">
+         Toto Wolff
+      </h1>
+
+
+      <p><strong>Team:</strong> Mercedes</p>
+      <p><strong>Nationality:</strong> Austrian</p>
+      <p><strong>Born:</strong> 1972</p>
+      <p><strong>In charge since:</strong> 2013</p>
+       <p><strong>History:</strong> Toto Wolff, born in Vienna, Austria, on January 12, 1972, is one of the most influential figures in modern Formula 1. After a career in motorsport as a racing driver and entrepreneur, he became involved in team management and investment, joining Williams as an executive director in 2012 before moving to Mercedes in 2013.
+                Wolff was appointed Team Principal and CEO of the Mercedes-AMG Petronas Formula One Team in 2013. Under his leadership, Mercedes established one of the most dominant eras in Formula 1 history, securing multiple Constructors’ and Drivers’ Championships with drivers including Lewis Hamilton and Nico Rosberg. Renowned for his strategic leadership, business acumen, and focus on team culture, Wolff has played a key role in maintaining Mercedes’ competitiveness while guiding the team through major regulatory and technical changes in the sport. </p>
+    </div>
+
+    <img src="../images/principals/wolff.jpeg" 
+    class="principal-photo" 
+    alt="Toto Wolff"
+    loading="lazy">
+
+  </section>
+</main>
+
+  <footer><p>© 2026 Elisa – F1 Fan Project</p></footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

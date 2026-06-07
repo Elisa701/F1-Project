@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shanghai International Circuit</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="fia-theme privacy-section">
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    This website uses only technical cookies necessary for proper functionality. 
+    By continuing to browse, you accept their use.
+  </p>
+  <button id="accept-cookies">OK</button>
+</div>
+
+<nav aria-label="Main navigation">
+  <a href="../index.html">Home</a>
+  <a href="../teams.html">Teams</a>
+  <a href="../drivers.html">Drivers</a>
+  <a href="../principals.html">Principals</a>
+  <a href="../circuits.html" aria-current="page">Circuits</a>
+  <a href="../grid-summary.html">Season Grid</a>
+  <a href="../about.html">About</a>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../contacts.html">Contacts</a>
+</nav>
+
+
+<main aria-labelledby="page-title">
+ <section class="circuit-page flag-china">
+
+  <h1 id="page-title">Shanghai International Circuit</h1>
+
+  <div class="circuit-layout">
+
+    <div class="circuit-image-wrapper">
+    <img class="circuit-image circuit-small" 
+     src="../images/circuits/shangai.jpeg" 
+     alt="Layout map of the Shanghai International Circuit"
+     loading="lazy">
+
+
+    </div>
+
+    <div class="circuit-info">
+      <h2>Technical Details</h2>
+      <p><strong>Location:</strong> Shanghai, China</p>
+      <p><strong>Length:</strong> 5.451 km</p>
+      <p><strong>Laps:</strong> 56</p>
+      <p><strong>First GP:</strong> 2004</p>
+    </div>
+
+  </div>
+
+  <h2>Curiosities</h2>
+  <p>Designed by Hermann Tilke, the Shanghai International Circuit is known for its unique layout inspired by the Chinese character “shang” (上). It debuted in 2004 and quickly became one of the most technically demanding modern circuits. The long, sweeping corners and heavy braking zones test tire management and aerodynamic stability. It has hosted many strategic and weather-influenced races.</p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+  <p>© 2026 Elisa – F1 Fan Project</p>
+</footer>
+
+  <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

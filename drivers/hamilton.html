@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lewis Hamilton</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css"> 
+</head>
+
+<body class="fia-theme privacy-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+
+<nav aria-label="Main navigation">
+  <a href="../index.html">Home</a>
+  <a href="../teams.html">Teams</a>
+  <a href="../drivers.html" aria-current="page">Drivers</a>
+  <a href="../principals.html">Principals</a>
+  <a href="../circuits.html">Circuits</a>
+  <a href="../grid-summary.html">Season Grid</a>
+  <a href="../about.html">About</a>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../contacts.html">Contacts</a>
+</nav>
+
+
+<main aria-labelledby="page-title">
+  <section class="driver-card hamilton-44 ferrari-section">
+
+    <div class="driver-info">
+   <h1 id="page-title">
+  <img src="../images/logos/ferrari-256.png" 
+        class="team-logo-small" 
+        alt="Scuderia Ferrari team logo">
+  Lewis Hamilton
+</h1>
+
+
+    <p><strong>Team:</strong> Scuderia Ferrari</p>
+    <p><strong>Team Principal:</strong> Frédéric Vasseur</p>
+    <p><strong>Number:</strong> 44</p>
+    <p><strong>Nationality:</strong> United Kingdom</p>
+    <p><strong>Debut:</strong> 2007</p>
+    <p><strong>Born:</strong> 7 January 1985</p>
+    <p><strong>History:</strong> British driver Lewis Hamilton is widely regarded as one of the greatest Formula 1 drivers of all time. After achieving unprecedented success with Mercedes, including seven World Drivers’ Championships, Hamilton made a historic move to Ferrari in the later stages of his career. Known for his combination of racecraft, consistency, adaptability, and leadership, he has influenced the sport both on and off the track through his activism, professionalism, and global popularity. Even approaching the latter phase of his career, Hamilton remained highly competitive and continued pursuing a record-breaking eighth world title with Ferrari.</p>
+  </div>
+
+    <img src="../images/drivers/hamilton.png"
+     class="driver-photo"
+     alt="Portrait of Formula 1 driver Lewis Hamilton"
+     loading="lazy">
+
+</section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Elisa – F1 Fan Project</p>
+  </footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+
+</html>

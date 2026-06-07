@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts – F1 Fan Project</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fia-theme about-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+  
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="drivers.html">Drivers</a>
+    <a href="principals.html">Principals</a>
+    <a href="circuits.html">Circuits</a>
+    <a href="grid-summary.html">Season Grid</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="contacts.html" aria-current="page">Contacts</a>
+  </nav>
+
+  <main aria-labelledby="page-title">
+
+    <section class="hero-bg contact-hero">
+      <h1 id="page-title">Contact Us</h1>
+      <p class="contact-subtitle">Get in touch for questions, feedback, or project information.</p>
+    </section>
+
+    <section class="contact-card ferrari-section">
+      <h2>Contact Information</h2>
+
+      <p>If you have any questions regarding the F1 Fan Project, feel free to reach out using the contact details below.</p>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:elisa.vassallo@studenti.unimi.it">elisa.vassallo@studenti.unimi.it</a></p>
+        <p><strong>Project:</strong> University assignment – Formula 1 Fan Website</p>
+        <p><strong>Response time:</strong> Usually within 24–48 hours</p>
+      </div>
+
+      <h3>Send a Message</h3>
+
+      <form class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Elisa – F1 Fan Project</p>
+  </footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

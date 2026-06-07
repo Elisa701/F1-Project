@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lando Norris</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="fia-theme privacy-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+
+<nav aria-label="Main navigation">
+  <a href="../index.html">Home</a>
+  <a href="../teams.html">Teams</a>
+  <a href="../drivers.html" aria-current="page">Drivers</a>
+  <a href="../principals.html">Principals</a>
+  <a href="../circuits.html">Circuits</a>
+  <a href="../grid-summary.html">Season Grid</a>
+  <a href="../about.html">About</a>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../contacts.html">Contacts</a>
+</nav>
+
+
+
+<main aria-labelledby="page-title">
+    <section class="driver-card norris-1 mclaren-section">
+
+  <div class="driver-info">
+    <h1 id="page-title">
+  <img src="../images/logos/mclaren-256.png" 
+  class="team-logo-small" 
+  alt="McLaren F1 Team logo">
+  Lando Norris
+</h1>
+
+
+    <p><strong>Team:</strong> McLaren</p>
+    <p><strong>Team Principal:</strong> Andrea Stella</p>
+    <p><strong>Number:</strong> 1</p>
+    <p><strong>Nationality:</strong> United Kingdom</p>
+    <p><strong>Debut:</strong> 2019</p>
+    <p><strong>Born:</strong> 13 November 1999</p>
+      <p><strong>History:</strong> British driver Lando Norris emerged as one of the leading stars of Formula 1 after years of steady progression with McLaren. Known for his smooth driving style, technical feedback, and strong qualifying performances, Norris transformed from a promising young talent into a world championship contender. His breakthrough title-winning campaign in 2025 cemented his reputation as one of the most complete drivers on the grid. Combining consistency, composure under pressure, and strong leadership qualities, Norris entered 2026 as the centerpiece of McLaren’s ambitions to remain at the front of Formula 1.</p>
+</div>
+
+ <img src="../images/drivers/norris.png"
+     class="driver-photo"
+     alt="Portrait of Formula 1 driver Lando Norris"
+     loading="lazy">
+
+
+</section>
+  </main>
+
+  <footer>
+    <p>© 2026 Elisa – F1 Fan Project</p>
+  </footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

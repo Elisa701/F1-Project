@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About This Project – Formula 1 Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" 
+        rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="ferrari-section">
+    <div id="cookie-banner" class="cookie-banner">
+    <p>
+      This website uses only technical cookies necessary for proper functionality. 
+      By continuing to browse, you accept their use.
+    </p>
+    <button id="accept-cookies">OK</button>
+  </div>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="drivers.html">Drivers</a>
+    <a href="principals.html">Principals</a>
+    <a href="circuits.html">Circuits</a>
+    <a href="grid-summary.html">Season Grid</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="contacts.html">Contacts</a>
+  </nav>
+
+  <main aria-labelledby="page-title">
+    <section class="about-section">
+      <h1 id="page-title">About This Project</h1>
+
+      <p>
+        This website was created as part of the Web Development course project for the academic year 2026.
+        The goal was to design and implement a complete, multi‑page website using only HTML and CSS,
+        while applying key concepts such as typography, layout, accessibility, responsive design,
+        and performance optimization.
+      </p>
+
+      <h2>Why Formula 1?</h2>
+      <p>
+        Formula 1 has always fascinated me for its combination of speed, technology, strategy, and human skill.
+        Choosing this theme allowed me to work with rich visual content and structured information,
+        while creating a website that is both engaging and educational.
+      </p>
+
+      <h2>Project Structure</h2>
+      <p>
+        The website is organized into several sections, each dedicated to a specific aspect of the 2026 Formula 1 season:
+      </p>
+      <ul>
+        <li>Teams overview and individual team pages</li>
+        <li>Drivers and team principals profiles</li>
+        <li>Circuits and track details</li>
+        <li>Season grid summary using CSS Grid</li>
+        <li>Privacy page following course guidelines</li>
+      </ul>
+
+      <h2>Technologies Used</h2>
+      <p>
+        The project was developed using:
+      </p>
+      <ul>
+        <li>Semantic HTML5</li>
+        <li>Custom CSS3 (no frameworks)</li>
+        <li>CSS Grid and Flexbox for layout</li>
+        <li>Responsive design with media queries</li>
+        <li>Accessibility improvements (ARIA labels, roles, alt text, keyboard navigation)</li>
+        <li>Performance enhancements such as lazy loading for images</li>
+      </ul>
+
+      <h2>What I Learned</h2>
+      <p>
+        Throughout the development of this project, I strengthened my understanding of web structure,
+        layout techniques, and responsive design. I also learned how to maintain consistency across multiple pages,
+        how to improve accessibility, and how to create a visually coherent theme using custom CSS.
+      </p>
+
+      <h2>Future Improvements</h2>
+      <p>
+        If expanded in the future, the project could include interactive elements using JavaScript,
+        dynamic data updates, or additional pages such as race results, standings, or historical statistics.
+      </p>
+
+      <p>
+        This project represents a complete and functional demonstration of the skills acquired during the course,
+        and it reflects both my passion for Formula 1 and my growth as a web developer.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Elisa – F1 Fan Project</p>
+  </footer>
+
+    <script>
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
