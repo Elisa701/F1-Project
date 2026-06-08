@@ -633,6 +633,11 @@ SEZIONE F — BACKGROUND MONOPOSTO
     line-height: 1.2 !important;
 }
 
+.team-card p {
+    margin: 2px 0 !important;
+    line-height: 1.2 !important;
+}
+
 
 .principal-photo {
     width: 260px;
