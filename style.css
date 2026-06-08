@@ -44,10 +44,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 12px 25px;        /* row-gap 12px quando va a capo, column-gap 25px */
 
-  flex-wrap: nowrap;
-  white-space: nowrap;
+  flex-wrap: wrap;       /* le voci vanno a capo invece di essere tagliate ai bordi */
 }
 
 nav a {
@@ -256,7 +255,6 @@ COLORI PERSONALIZZATI GRID-CARD
   font-size: 0.98rem;
 }
 
-/* Responsive grid */
 @media (max-width: 992px) {
   .grid-page .season-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1478,10 +1476,12 @@ SEZIONE L - CONTACT PAGE
 ============================ */
 
 .cookie-banner {
+  display: none; /* ← QUESTA È LA CHIAVE */
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+  box-sizing: border-box;   /* padding incluso nel 90% → niente overflow orizzontale */
   background: rgba(10, 15, 31, 0.85);
   backdrop-filter: blur(8px);
   padding: 18px 25px;
@@ -1491,27 +1491,29 @@ SEZIONE L - CONTACT PAGE
   color: #fff;
   font-size: 0.95rem;
   box-shadow: 0 4px 18px rgba(0,0,0,0.4);
-  display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 15px;
   z-index: 9999;
 }
 
-.cookie-banner button {
-  background-color: #E10600;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s ease;
+.cookie-banner p {
+  margin: 0;          /* toglie i margini di default del <p> che sbilanciano l'altezza */
 }
 
-.cookie-banner button:hover {
-  background-color: #ff1a1a;
-  transform: translateY(-2px);
+#accept-cookies {
+  flex-shrink: 0;     /* il bottone OK non si schiaccia accanto al testo */
+  cursor: pointer;
+}
+
+/* Schermi molto stretti: testo sopra, bottone sotto a tutta larghezza (più tappabile) */
+@media (max-width: 400px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 10px;
+  }
 }
 
 
@@ -1548,7 +1550,9 @@ img {
 
 @media (max-width: 600px) {
   .hero-home {
-    height: 48vh;
+    min-height: 48vh;   /* prima era height:48vh → tagliava il testo */
+    height: auto;
+    overflow: visible;
     padding-top: 40px;
     background-position: center;
   }
@@ -1668,6 +1672,46 @@ section {
 .principal-card::before,
 .principal-card::after {
     pointer-events: none !important;
+}
+
+
+/* ============================
+   PATCH RESPONSIVE — PAGINE CIRCUITO (DETTAGLIO)
+============================ */
+
+@media (max-width: 768px) {
+  /* immagine sopra, dettagli sotto: niente più layout schiacciato */
+  .circuit-layout,
+  .fia-theme .circuit-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin: 24px auto;
+  }
+
+  .circuit-image-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  .circuit-image.circuit-small,
+  .circuit-layout .circuit-image {
+    width: 90%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .fia-theme .circuit-info,
+  .circuit-info {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .fia-theme .circuit-header h1 {
+    font-size: 28px;
+  }
 }
 
 
