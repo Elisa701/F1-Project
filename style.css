@@ -1117,7 +1117,7 @@ SEZIONE H — PAGINA CIRCUITI
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
+}
 
 .circuit-page.brazil-flag {
   background-image:
@@ -1657,7 +1657,6 @@ section {
 ============================ */
 
 @media (max-width: 768px) {
-  /* immagine sopra, dettagli sotto: niente più layout schiacciato */
   .circuit-layout,
   .fia-theme .circuit-layout {
     flex-direction: column;
@@ -1665,7 +1664,8 @@ section {
     gap: 24px;
     margin: 24px auto;
   }
-
+}
+   
   .circuit-image-wrapper {
     width: 100%;
     text-align: center;
