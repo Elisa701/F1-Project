@@ -63,8 +63,6 @@ nav a:hover {
 }
 
 
-
-
 /* ============================
    SEZIONE C — HERO 
 ============================ */
@@ -130,7 +128,6 @@ nav a:hover {
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 
 /* ============================
@@ -238,8 +235,6 @@ COLORI PERSONALIZZATI GRID-CARD
 }
 
 
-
-
 .grid-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.45);
@@ -266,7 +261,6 @@ COLORI PERSONALIZZATI GRID-CARD
     grid-template-columns: 1fr;
   }
 }
-
 
 
 /* ============================
@@ -299,9 +293,6 @@ COLORI PERSONALIZZATI GRID-CARD
 }
 
 
-
-
-
 /* ============================
    PRIVACY PAGE
 ============================ */
@@ -325,7 +316,6 @@ COLORI PERSONALIZZATI GRID-CARD
   background-repeat: no-repeat;
   color: #ffffff !important;
 }
-
 
 
 /* ============================
@@ -452,9 +442,6 @@ LINK NELLE SEZIONI TEAM — STILE CARD
 }
 
 
-
-
-
 /* ============================
 SEZIONE F — BACKGROUND MONOPOSTO
 ============================ */
@@ -468,7 +455,6 @@ SEZIONE F — BACKGROUND MONOPOSTO
   background-size: cover;
   color: #FFFFFF;
 }
-
 
 .teams-page .ferrari-section {
   --team-car: url("images/cars/ferrari.jpeg");
@@ -512,10 +498,6 @@ SEZIONE F — BACKGROUND MONOPOSTO
 .teams-page .cadillac-section {
   --team-car: url("images/cars/cadillac.jpeg");
 }
-
-
-
-
 
 /* ============================
    SEZIONE G — CARD TEAM, PILOTI, PRINCIPALS (OTTIMIZZATA)
@@ -575,7 +557,6 @@ SEZIONE F — BACKGROUND MONOPOSTO
   box-sizing: border-box;
 }
 
-
 /* --- FOTO COMUNI --- */
 .driver-photo,
 .principal-photo {
@@ -593,7 +574,6 @@ SEZIONE F — BACKGROUND MONOPOSTO
     gap: 30px !important;
     text-align: left !important;
 }
-
 
 .driver-photo {
     width: 250px !important;
@@ -1481,12 +1461,12 @@ SEZIONE L - CONTACT PAGE
 ============================ */
 
 .cookie-banner {
-  display: none; /* ← QUESTA È LA CHIAVE */
+  display: none; 
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  box-sizing: border-box;   /* padding incluso nel 90% → niente overflow orizzontale */
+  box-sizing: border-box;
   background: rgba(10, 15, 31, 0.85);
   backdrop-filter: blur(8px);
   padding: 18px 25px;
@@ -1503,15 +1483,15 @@ SEZIONE L - CONTACT PAGE
 }
 
 .cookie-banner p {
-  margin: 0;          /* toglie i margini di default del <p> che sbilanciano l'altezza */
+  margin: 0;     
 }
 
 #accept-cookies {
-  flex-shrink: 0;     /* il bottone OK non si schiaccia accanto al testo */
+  flex-shrink: 0;    
   cursor: pointer;
 }
 
-/* Schermi molto stretti: testo sopra, bottone sotto a tutta larghezza (più tappabile) */
+
 @media (max-width: 400px) {
   .cookie-banner {
     flex-direction: column;
@@ -1555,7 +1535,7 @@ img {
 
 @media (max-width: 600px) {
   .hero-home {
-    min-height: 48vh;   /* prima era height:48vh → tagliava il testo */
+    min-height: 48vh;   
     height: auto;
     overflow: visible;
     padding-top: 40px;
@@ -1627,7 +1607,6 @@ section {
    PATCH UNIVERSALE — LAYOUT TIPO "ABOUT"
 ============================ */
 
-/* Contenitore uniforme per tutte le sezioni */
 .team-card,
 .driver-card,
 .principal-card,
@@ -1641,8 +1620,6 @@ section {
     box-sizing: border-box !important;
 }
 
-/* Layout a colonna come la About */
-.team-card,
 .driver-card,
 .principal-card,
 .circuit-card {
@@ -1652,7 +1629,26 @@ section {
     text-align: left;
 }
 
-.team-card p,
+/* ============================
+   FIX TEAM PAGE
+============================ */
+
+.team-card {
+    display: block;
+    text-align: left;
+}
+
+.team-card h1 {
+    margin-bottom: 25px;
+}
+
+.team-card p {
+    margin: 8px 0;
+    line-height: 1.4;
+    font-size: 1.1rem;
+    word-break: break-word;
+}
+
 .driver-card p,
 .principal-card p,
 .circuit-card p {
@@ -1678,7 +1674,6 @@ section {
 .principal-card::after {
     pointer-events: none !important;
 }
-
 
 /* ============================
    PATCH RESPONSIVE — PAGINE CIRCUITO (DETTAGLIO)
