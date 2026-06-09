@@ -557,6 +557,15 @@ SEZIONE F — BACKGROUND MONOPOSTO
   box-sizing: border-box;
 }
 
+.team-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
 /* --- FOTO COMUNI --- */
 .driver-photo,
 .principal-photo {
