@@ -44,9 +44,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px 25px;        /* row-gap 12px quando va a capo, column-gap 25px */
+  gap: 12px 25px;
 
-  flex-wrap: wrap;       /* le voci vanno a capo invece di essere tagliate ai bordi */
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -500,7 +500,7 @@ SEZIONE F — BACKGROUND MONOPOSTO
 }
 
 /* ============================
-   SEZIONE G — CARD TEAM, PILOTI, PRINCIPALS (OTTIMIZZATA)
+   SEZIONE G — CARD TEAM, PILOTI, PRINCIPALS 
 ============================ */
 
 /* --- STRUTTURA BASE CARD --- */
@@ -917,7 +917,6 @@ SEZIONE G3 — CARD CIRCUITI (FORZATA)
   background-position: center;
 }
 
-
 .circuit-card.flag-azerbaijan {
   background-image:
     linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
@@ -934,7 +933,6 @@ SEZIONE G3 — CARD CIRCUITI (FORZATA)
   background-position: center;
 }
 
-
 .circuit-card.flag-qatar {
   background-image:
     linear-gradient(rgba(10, 15, 31, 0.60), rgba(10, 15, 31, 0.60)),
@@ -942,7 +940,6 @@ SEZIONE G3 — CARD CIRCUITI (FORZATA)
   background-size: cover;
   background-position: center;
 }
-
 
 .circuit-card.test-abudhabi {
   background-image:
@@ -952,7 +949,6 @@ SEZIONE G3 — CARD CIRCUITI (FORZATA)
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 .circuit-image.circuit-small {
     max-width: 420px;
@@ -980,6 +976,7 @@ SEZIONE G3 — CARD CIRCUITI (FORZATA)
     transform: translateY(-4px) !important;
     box-shadow: 0 8px 28px rgba(0,0,0,0.45) !important;
 }
+
 
 /* ============================
 CIRCUIT CARDS — Responsive
@@ -1053,7 +1050,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-repeat: no-repeat;
 }
 
-
 .circuit-page.australia-flag {
   background-image:
     linear-gradient(rgba(10, 15, 31, 0.35), 
@@ -1063,7 +1059,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 .circuit-page.USA-flag {
   background-image:
@@ -1075,7 +1070,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-repeat: no-repeat;
 }
 
-
 .circuit-page.bahrain-flag {
   background-image:
     linear-gradient(rgba(10, 15, 31, 0.35), 
@@ -1085,7 +1079,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 .circuit-page.azerbaijan-flag {
   background-image:
@@ -1097,8 +1090,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-repeat: no-repeat;
 }
 
-
-
 .circuit-page.spain-flag {
   background-image:
     linear-gradient(rgba(10, 15, 31, 0.35), 
@@ -1109,8 +1100,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-repeat: no-repeat;
 }
 
-
-
 .circuit-page.hungary-flag {
   background-image:
     linear-gradient(rgba(10, 15, 31, 0.35), 
@@ -1119,8 +1108,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
 
 
 .circuit-page.brazil-flag {
@@ -1133,7 +1120,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-repeat: no-repeat;
 }
 
-
 .circuit-page.saudi-flag {
   background-image:
     linear-gradient(rgba(10, 15, 31, 0.35), 
@@ -1144,7 +1130,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-repeat: no-repeat;
 }
 
-
 .circuit-page.qatar-flag {
   background-image:
     linear-gradient(rgba(10, 15, 31, 0.35), 
@@ -1154,7 +1139,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 .circuit-page.singapore-flag {
   background-image:
@@ -1176,7 +1160,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-repeat: no-repeat;
 }
 
-
 .circuit-page.monaco-flag {
   background-image:
     linear-gradient(rgba(10, 15, 31, 0.35), 
@@ -1186,7 +1169,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 .circuit-page.canada-flag {
   background-image:
@@ -1198,7 +1180,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-repeat: no-repeat;
 }
 
-
 .circuit-page.ferrari-flag {
   background-image:
     linear-gradient(rgba(10, 15, 31, 0.35), 
@@ -1208,7 +1189,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 .circuit-page.redbull-flag {
   background-image:
@@ -1220,8 +1200,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-repeat: no-repeat;
 }
 
-
-
 .circuit-page.china-flag {
   background-image:
     linear-gradient(rgba(10, 15, 31, 0.35), 
@@ -1231,7 +1209,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 .circuit-page.UK-flag {
   background-image:
@@ -1253,7 +1230,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-repeat: no-repeat;
 }
 
-
 .circuit-page.japan-flag {
   background-image:
     linear-gradient(rgba(10, 15, 31, 0.35), 
@@ -1263,7 +1239,6 @@ SEZIONE H — PAGINA CIRCUITI
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 .circuit-page.netherlands-flag {
   background-image:
@@ -1275,15 +1250,11 @@ SEZIONE H — PAGINA CIRCUITI
   background-repeat: no-repeat;
 }
 
-
-
-
 .fia-theme .circuit-wrapper {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
 }
-
 
 .fia-theme .circuit-header h1 {
     font-size: 42px;
@@ -1311,7 +1282,6 @@ SEZIONE H — PAGINA CIRCUITI
     margin: 40px auto;
 }
 
-
 .fia-theme .circuit-info,
 .fia-theme .circuit-description {
     background-color: rgba(15, 20, 36, 0.75);
@@ -1338,8 +1308,6 @@ SEZIONE H — PAGINA CIRCUITI
     line-height: 1.7;
     color: #DDDDDD;
 }
-
-
 
 
 /* ============================
@@ -1456,6 +1424,7 @@ SEZIONE L - CONTACT PAGE
   transform: translateY(-3px);
 }
 
+   
 /* ============================
    COOKIE BANNER
 ============================ */
@@ -1581,7 +1550,6 @@ img {
     gap: 16px;
   }
 }
-
 
 .hero-home {
     position: relative;
@@ -1713,5 +1681,3 @@ section {
     font-size: 28px;
   }
 }
-
-
