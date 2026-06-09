@@ -234,6 +234,22 @@ COLORI PERSONALIZZATI GRID-CARD
     background-image: url('images/circuits/marinabay.jpeg');
 }
 
+/* Teams */
+.ferrari-section .grid-card-bg {
+    background-image: url('images/details/ferrari.jpeg');
+}
+.mclaren-section .grid-card-bg {
+    background-image: url('images/details/mclaren.jpeg');
+}
+
+.redbull-section .grid-card-bg {
+    background-image: url('images/details/redbull.jpeg');
+}
+
+.mercedes-section .grid-card-bg {
+    background-image: url('images/details/mercedes.jpeg');
+}
+
 
 .grid-card:hover {
   transform: translateY(-4px);
