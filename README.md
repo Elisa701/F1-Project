@@ -3,8 +3,8 @@ The F1 Project is a multi‑page website designed to present key aspects of the 
 The project was created as part of a university assignment and demonstrates skills in HTML, CSS, responsive layout, and multi‑page website structure.
 
 
-✨ Features
-Homepage introducing the project and navigation.
+Features
+- Homepage introducing the project and navigation.
 - Drivers page with images, descriptions, and layout cards.
 - Teams page showing all 2024 F1 teams with logos and colors.
 - Team Principals page with structured profiles.
@@ -16,35 +16,35 @@ Homepage introducing the project and navigation.
 - Clean and consistent design across all pages.
 
 
-🎨 Technologies Used
+Technologies Used
 - HTML5 for structure
 - CSS3 for styling, layout, and responsiveness
 - Flexbox & Grid for layout organization
 - GitHub Pages for deployment
 
 
-🚀 Live Demo
+Live Demo
 You can view the live version of the project here:
 - https://elisa701.github.io/F1-Project/
 
 
-🧭 How to Navigate the Website
+How to Navigate the Website
 - Use the navbar at the top of each page to move between sections.
 - Each page follows a consistent layout for easy navigation.
 - Images and cards are organized to keep content readable and visually appealing.
 
 
-📄 Future Improvements
+Future Improvements
 - Add JavaScript interactions (animations, dynamic content).
 - Improve mobile responsiveness.
 - Add a dark/light mode toggle.
 - Add a database or API integration for real‑time standings.
 
 
-👩‍💻 Author
-Elisa  
-F1 enthusiast & web development student
-© 2026 – F1 Fan Project
+Author
+  Elisa  
+  F1 enthusiast & web development student :)
+  © 2026 – F1 Fan Project
 
 
 
