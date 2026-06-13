@@ -1,303 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Technical Presentation – F1 Project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        :root {
-            --bg: #050816;
-            --card: #0f172a;
-            --accent: #e10600;
-            --text: #e5e7eb;
-            --muted: #9ca3af;
-            --code-bg: #020617;
-        }
+  <meta charset="utf-8">
+  <title>F1 Project – Technical Presentation</title>
 
-        * {
-            box-sizing: border-box;
-        }
+  <!-- Reveal.js CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
 
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        .wrapper {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 2.5rem 1.5rem 3.5rem;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            margin: 0 0 0.5rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-        }
-
-        header p {
-            margin: 0.15rem 0;
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .tagline {
-            margin-top: 0.8rem;
-            font-style: italic;
-            color: #f9fafb;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
-            gap: 1.5rem;
-        }
-
-        @media (max-width: 800px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        section {
-            background: linear-gradient(145deg, rgba(15,23,42,0.96), rgba(15,23,42,0.85));
-            border-radius: 14px;
-            padding: 1.4rem 1.5rem 1.3rem;
-            border: 1px solid rgba(148,163,184,0.25);
-            box-shadow: 0 18px 45px rgba(0,0,0,0.55);
-            margin-bottom: 1.2rem;
-        }
-
-        section h2 {
-            margin: 0 0 0.6rem;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: #f9fafb;
-        }
-
-        section h3 {
-            margin: 0.8rem 0 0.3rem;
-            font-size: 0.98rem;
-            color: #e5e7eb;
-        }
-
-        p {
-            margin: 0.25rem 0;
-            font-size: 0.95rem;
-        }
-
-        ul {
-            margin: 0.25rem 0 0.25rem 1.1rem;
-            padding: 0;
-            font-size: 0.95rem;
-        }
-
-        li {
-            margin: 0.15rem 0;
-        }
-
-        .pill {
-            display: inline-block;
-            padding: 0.18rem 0.55rem;
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.6);
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--muted);
-            margin-right: 0.35rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .pill--accent {
-            border-color: var(--accent);
-            color: #fecaca;
-        }
-
-        .code {
-            font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            background: var(--code-bg);
-            border-radius: 8px;
-            padding: 0.6rem 0.7rem;
-            font-size: 0.85rem;
-            border: 1px solid rgba(148,163,184,0.35);
-            overflow-x: auto;
-            margin: 0.35rem 0;
-        }
-
-        a {
-            color: #f97373;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .highlight {
-            color: #fbbf24;
-        }
-
-        footer {
-            margin-top: 2rem;
-            text-align: center;
-            font-size: 0.8rem;
-            color: var(--muted);
-        }
-    </style>
+  <style>
+    h1, h2, h3 { font-family: 'Arial'; }
+    .reveal section img { border-radius: 10px; }
+  </style>
 </head>
+
 <body>
-<div class="wrapper">
-    <header>
-        <h1>F1 Project – Technical Presentation</h1>
-        <p>Author: Elisa</p>
-        <p>Course: Web Technologies – Final Project</p>
-        <p class="tagline">A static Formula 1 themed website built with semantic HTML and modern CSS.</p>
-    </header>
+  <div class="reveal">
+    <div class="slides">
 
-    <div class="grid">
-        <!-- LEFT COLUMN -->
-        <div>
-            <section>
-                <h2>1. Project overview</h2>
-                <p>
-                    The project is a static website dedicated to <span class="highlight">Formula 1</span>, 
-                    focusing on teams, drivers and key figures of the sport.  
-                    The goal is to demonstrate a clean structure, consistent layout and responsive design using only
-                    <strong>HTML</strong> and <strong>CSS</strong>.
-                </p>
-                <p>
-                    The website is deployed via <strong>GitHub Pages</strong>:
-                    <br>
-                    <a href="https://elisa701.github.io/F1-Project/" target="_blank">
-                        https://elisa701.github.io/F1-Project/
-                    </a>
-                </p>
-            </section>
+      <!-- SLIDE 1 -->
+      <section>
+        <h1>F1 Project</h1>
+        <h3>Technical Presentation</h3>
+        <p>By Elisa – Developer</p>
+      </section>
 
-            <section>
-                <h2>2. Technologies and tools</h2>
-                <p><span class="pill pill--accent">HTML5</span><span class="pill pill--accent">CSS3</span></p>
-                <ul>
-                    <li><strong>HTML5</strong> for semantic structure and content organization.</li>
-                    <li><strong>CSS3</strong> for layout, typography, colors and responsive behavior.</li>
-                    <li><strong>Flexbox</strong> and/or <strong>CSS Grid</strong> for page layout and cards.</li>
-                    <li><strong>Git</strong> and <strong>GitHub</strong> for version control and hosting.</li>
-                    <li><strong>GitHub Pages</strong> for free static deployment.</li>
-                </ul>
-            </section>
+      <!-- SLIDE 2 -->
+      <section>
+        <h2>Project Goal</h2>
+        <p>A modern, responsive Formula 1 web platform built with HTML, CSS, JS and Bootstrap 5.</p>
+      </section>
 
-            <section>
-                <h2>3. Site structure</h2>
-                <h3>3.1 Main pages</h3>
-                <ul>
-                    <li><strong>index.html</strong> – homepage with general introduction to Formula 1.</li>
-                    <li><strong>teams</strong> pages – cards for each team with logo, colors and basic info.</li>
-                    <li><strong>drivers</strong> pages – profiles with photo, team, number and short bio.</li>
-                    <li><strong>principals</strong> or staff pages – key figures with role and team.</li>
-                </ul>
+      <!-- SLIDE 3 -->
+      <section>
+        <h2>Why This Project?</h2>
+        <ul>
+          <li>Clear information architecture</li>
+          <li>Responsive layout</li>
+          <li>Accessible design</li>
+          <li>Real-world web development workflow</li>
+        </ul>
+      </section>
 
-                <h3>3.2 Navigation</h3>
-                <p>
-                    A consistent <strong>navigation bar</strong> is reused across pages to allow the user to move
-                    between teams, drivers and other sections.  
-                    The active page is visually highlighted to improve orientation.
-                </p>
-            </section>
+      <!-- SLIDE 4 -->
+      <section>
+        <h2>Technologies Used</h2>
+        <ul>
+          <li>HTML5 semantic structure</li>
+          <li>CSS3 + custom components</li>
+          <li>Bootstrap 5</li>
+          <li>JavaScript (cookies, forms, interactions)</li>
+          <li>GitHub Pages deployment</li>
+        </ul>
+      </section>
 
-            <section>
-                <h2>4. Layout and styling</h2>
-                <h3>4.1 Global layout</h3>
-                <ul>
-                    <li>Use of a <strong>main container</strong> with max-width to keep content centered.</li>
-                    <li>Consistent <strong>header</strong>, <strong>main</strong> and <strong>footer</strong> structure.</li>
-                    <li>Cards for teams and drivers with images, titles and key data.</li>
-                </ul>
+      <!-- SLIDE 5 -->
+      <section>
+        <h2>Development Workflow</h2>
+        <p>VS Code → Git → GitHub → GitHub Pages</p>
+      </section>
 
-                <h3>4.2 Responsive design</h3>
-                <ul>
-                    <li>Fluid widths and relative units (%, rem) where appropriate.</li>
-                    <li>Media queries to adapt the number of columns on smaller screens.</li>
-                    <li>Navigation and cards remain readable on mobile devices.</li>
-                </ul>
-            </section>
-        </div>
+      <!-- SLIDE 6 -->
+      <section>
+        <h2>Long-Term Plan</h2>
+        <p>Expand the site with dynamic content, user feedback, and social media integration.</p>
+      </section>
 
-        <!-- RIGHT COLUMN -->
-        <div>
-            <section>
-                <h2>5. Code organization</h2>
-                <h3>5.1 Repository</h3>
-                <p>
-                    The source code is stored on GitHub:
-                    <br>
-                    <a href="https://github.com/elisa701/F1-Project" target="_blank">
-                        https://github.com/elisa701/F1-Project
-                    </a>
-                </p>
-                <p>Example of a simple, reusable card structure:</p>
-                <div class="code">
-&lt;article class="team-card"&gt;
-    &lt;img src="images/redbull.png" alt="Red Bull Racing logo"&gt;
-    &lt;h2&gt;Red Bull Racing&lt;/h2&gt;
-    &lt;p&gt;Drivers: Max Verstappen, Sergio Pérez&lt;/p&gt;
-    &lt;a href="redbull.html" class="btn"&gt;Discover more&lt;/a&gt;
-&lt;/article&gt;
-                </div>
-            </section>
+      <!-- SLIDE 7 -->
+      <section>
+        <h2>Lessons Learned</h2>
+        <p>Responsive design, layout consistency, code organisation, accessibility.</p>
+      </section>
 
-            <section>
-                <h2>6. Accessibility and semantics</h2>
-                <ul>
-                    <li>Use of semantic tags: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>.</li>
-                    <li>Descriptive <strong>alt</strong> attributes for images (team logos, driver photos).</li>
-                    <li>Clear heading hierarchy (<code>h1</code>, <code>h2</code>, <code>h3</code>).</li>
-                    <li>Color contrast chosen to keep text readable on dark backgrounds.</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>7. Git and deployment workflow</h2>
-                <ul>
-                    <li>Local changes committed with meaningful messages (e.g. <code>"Add driver cards layout"</code>).</li>
-                    <li>Push to GitHub to keep the remote repository updated.</li>
-                    <li>GitHub Pages automatically serves the content from the <code>main</code> branch.</li>
-                </ul>
-                <p>
-                    This workflow ensures that every change to the project is versioned and that the online
-                    site is always synchronized with the repository.
-                </p>
-            </section>
-
-            <section>
-                <h2>8. Possible improvements</h2>
-                <ul>
-                    <li>Add simple <strong>animations</strong> or <strong>hover effects</strong> to cards and buttons.</li>
-                    <li>Introduce a <strong>dark/light theme switcher</strong>.</li>
-                    <li>Extend content with more detailed statistics for teams and drivers.</li>
-                    <li>Refactor CSS into smaller, modular files for larger projects.</li>
-                </ul>
-                <p>
-                    These improvements are not required for the assignment, but show how the project could evolve
-                    into a richer Formula 1 information website.
-                </p>
-            </section>
-        </div>
     </div>
+  </div>
 
-    <footer>
-        Technical presentation for the F1 Project – static website built with HTML &amp; CSS.
-    </footer>
-</div>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize();
+  </script>
 </body>
 </html>
